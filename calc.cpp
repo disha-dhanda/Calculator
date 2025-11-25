@@ -14,6 +14,15 @@ public:
             return 0;
         }
     }
+    int modulo(int a, int b) {
+    if (b != 0) {
+        return a % b;
+    } else {
+        cout << "Error: Modulo by zero!" << endl;
+        return 0;
+    }
+}
+
 };
 int main() {
     int choice;
@@ -25,7 +34,8 @@ int main() {
     cout << "2. Subtraction" << endl;
     cout << "3. Multiplication" << endl;
     cout << "4. Division" << endl;
-    cout << "5. Advanced Operation (will be replaced in branches)" << endl; // ← this line WILL cause conflict
+    cout << "5. Modulo" << endl;
+    cout << "5. Modulo" << endl; // ← this line WILL cause conflict
     cout << "Enter your choice (1–5): ";
     cin >> choice;
 
@@ -48,7 +58,7 @@ int main() {
             cout << "Result: " << calc.divide(num1, num2) << endl;
             break;
         case 5:
-            cout << "Advanced operation will be added later!" << endl;  // ← also part of conflict
+           cout << "Result: " << calc.modulo((int)num1, (int)num2) << endl;  // ← also part of conflict
             break;
         default:
             cout << "Invalid choice!" << endl;
